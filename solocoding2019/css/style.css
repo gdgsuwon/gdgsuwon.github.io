@@ -121,7 +121,7 @@ code {
 .block-branching { background-color: #000; }
 .block-branching h2 { color: #FFF; }
 .block-branching p { color: #DDD; }
-.block-branching a { color: #FFF; font-size: 40px; font-weight: normal;font-style: normal; background-color: #06406c; padding: 10px 15px; border-radius: 10px; text-decoration: none; }
+.block-branching a { color: #FFF; font-size: 40px; font-weight: normal;font-style: normal; background-color: #348fd4; padding: 10px 15px; border-radius: 10px; text-decoration: none; }
 .block-branching code { color: #000; background-color: white; }
 .block-merging { background-color: #F2F2F2; }
 .block-merging h2 { color: #666; }
