@@ -80,9 +80,8 @@
 			<h2>GitHub 계정 생성</h2>
 			<p>
 			    GitHub에 계정이 없다면 계정도 만들어야해요.<br />
-				<img src="img/github-logo.png" alt="깃허브 로고" /><br />
-				GitHub에 접속하여 계정을 만듭니다.<br />
-				<p><a href="https://github.com">https://github.com</a></p>
+				<a href="https://www.github.com" target="_blank"><img src="img/github-logo.png" alt="깃허브 로고" /></a><br />
+				<code>GitHub 회원가입</code><br />
 				GitHub은 개발자를 위한 SNS 공간이에요.<br />
 			</p>
 		</div>
@@ -94,6 +93,60 @@
 				<code>git clone https://github.com/gdgsuwon/solocoding2019.git</code><br />
 			</p>
 		</div>
+		<a name="trees"></a>
+		<div class="scrollblock block-trees">
+			<h2>자신의 브랜치로 이동하기</h2>
+			<p>
+				checkout을 통해 자신의 브랜치로 이동해요.<br />
+				<code>git checkout &lt;자신의 브랜치명&gt;</code><br />
+			</p>
+		</div>
+		<a name="add"></a>
+		<div class="scrollblock block-add">
+			<h2>".gitignore" 파일 작성하기</h2>
+			<p>
+				자신의 브랜치에 <b>".gitignore"</b> 파일을 작성해보아요.<br /><br />
+				<b>".gitignore"</b> 파일이란?<br />
+				불필요한 build 결과물이나 환경설정을 git에서 제외시킬 수 있는 설정파일이에요.<br />
+				아래 링크로 들어가서, 내용을 모두 복사붙여넣기하여 <br />
+				<b>".gitignore"</b> 파일을 자신의 브랜치 최상위 경로에 생성합니다.<br />
+				<code>https://raw.githubusercontent.com/nisrulz/flutter-examples/master/.gitignore</code><br />
+			</p>
+		</div>
+		<a name="push"></a>
+		<div class="scrollblock block-remote">
+			<h2>추가와 확정(commit)</h2>
+			<p>
+				생성한 <b>".gitignore"</b> 파일은 아래 명령어로 (<b>인덱스</b>에) 추가할 수 있어요.<br />
+				<code>git add .gitignore</code><br /><br />
+				이것이 바로 git의 기본 작업 흐름에서 첫 단계에 해당돼요.<br />
+				하지만 실제로 변경 내용을 확정하려면 아래 명령을 내려야 한답니다.<br />
+				<code>git commit -m "Add .gitignore file"</code><br /><br />
+				자, 이제 변경된 파일이 <b>HEAD</b>에 반영됐어요.<br />
+				하지만, 원격 저장소에는 아직 반영이 안 됐답니다.
+			</p>
+		</div>
+		<a name="update"></a>
+		<div class="scrollblock block-merging">
+			<h2>수정 내용 발행(push)하기</h2>
+			<p>
+				현재의 변경 내용은 아직 로컬 저장소의 <b>HEAD</b> 안에 머물고 있어요.<br />
+				이제 이 변경 내용을 원격 서버로 올려봅시다. 아래 명령을 실행하세요.<br />
+				<code>git push origin &lt;자신의 브랜치명&gt;</code><br /><br />
+				짝짝짝! 드디어 git 저장소에 gitignore 파일을 넣어보았습니다.<br />
+				이처럼, 이후 작업하신 내용은 &lt;자신의 브랜치&gt;에 넣으시면 됩니다.<br /><br />	
+			</p>
+		</div>
+		<a name="checkout-replace"></a>
+		<div class="scrollblock block-checkout-replace">
+		    <h2>git 마무리</h2>
+			<p>
+			    잘 안되셨나요? 도움이 필요하다면, 아래 링크로 질문을 남겨주세요. <br />
+				<a href="https://github.com/gdgsuwon/solocoding2019/issues" target="_blank">질문남기기</a><br /><br />
+				git이 잘 익숙하지 않다면, 아래 링크를 참고하시는 것도 좋아요. <br />
+				<a href="https://rogerdudler.github.io/git-guide/index.ko.html" target="_blank">git - 간편안내서</a><br />
+			</p>
+		</div>
         <a name="setup"></a>
 		<div class="scrollblock block-setup">
 			<h2><img src="img/flutter-logo.png" /> 설치</h2>
@@ -101,37 +154,6 @@
 			<p><a href="https://flutter.dev/docs/get-started/install/windows">OS X용 Flutter 다운로드</a></p>
 		    <p><a href="https://flutter.dev/docs/get-started/install/macos">Windows용 Flutter 다운로드</a></p>
 			<p><a href="https://flutter.dev/docs/get-started/install/linux">Linux용 Flutter 다운로드</a></p>
-		</div>
-		<a name="trees"></a>
-		<div class="scrollblock block-trees">
-			<h2>자신의 브랜치로 이동하기</h2>
-			<p>
-				checkout을 통해 자신의 브랜치로 이동해요.<br />
-				<code>git checkout [자신의 브랜치명]</code><br />
-			</p>
-		</div>
-		<a name="add"></a>
-		<div class="scrollblock block-add">
-			<h2>추가와 확정(commit)</h2>
-			<p>
-				변경된 파일은 아래 명령어로 (<b>인덱스</b>에) 추가할 수 있어요.<br />
-				<code>git add &lt;파일 이름&gt;</code><br />
-				<code>git add *</code><br />
-				이것이 바로 git의 기본 작업 흐름에서 첫 단계에 해당돼요.<br />
-				하지만 실제로 변경 내용을 확정하려면 아래 명령을 내려야 한답니다.<br />
-				<code>git commit -m "이번 확정본에 대한 설명"</code><br />
-				자, 이제 변경된 파일이 <b>HEAD</b>에 반영됐어요.<br />
-				하지만, 원격 저장소에는 아직 반영이 안 됐답니다.
-			</p>
-		</div>
-		<a name="push"></a>
-		<div class="scrollblock block-remote">
-			<h2>변경 내용 발행(push)하기</h2>
-			<p>
-				현재의 변경 내용은 아직 로컬 저장소의 <b>HEAD</b> 안에 머물고 있어요.<br />
-				이제 이 변경 내용을 원격 서버로 올려봅시다. 아래 명령을 실행하세요.<br />
-				<code>git push origin [자신의 브랜치명]</code><br />
-			</p>
 		</div>
 		<a name="update"></a>
 		<div class="scrollblock block-merging">
