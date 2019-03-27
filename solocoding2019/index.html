@@ -10,6 +10,9 @@
 		<link href="//fonts.googleapis.com/css?family=Chelsea+Market" rel="stylesheet" type="text/css" />
 		<link href="//cdnjs.cloudflare.com/ajax/libs/normalize/0/normalize.min.css" rel="stylesheet" type="text/css" />
 		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/androidstudio.min.css">
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
 		<style type="text/css">
 			/* Korean specific font information */
 
@@ -70,8 +73,8 @@
 			<p>
 			    Git Bash 혹은 터미널을 실행합니다. (환경변수 설정필요)<br />
 				사용자 이름과 이메일정보를 설정합니다.<br /><br />
-				<code>git config --global user.name "GDG Suwon"</code><br />
-				<code>git config --global user.email email@domain.com</code><br />
+				<code>git config --global user.name &lt;본인 이름&gt;</code><br />
+				<code>git config --global user.email &lt;본인 이메일주소&gt;</code><br />
 			</p>
 		</div>
 		<a name="branching"></a>
@@ -79,69 +82,21 @@
 			<h2>GitHub 계정 생성하기</h2>
 			<p>
 			    GitHub에 계정이 없다면 계정도 만들어야해요.<br />
-				<a href="https://www.github.com" target="_blank"><img src="img/github-logo.png" alt="깃허브 로고" /></a><br />
-				<code>GitHub 회원가입</code><br /><br />
+				<img src="img/github-logo.png" alt="깃허브 로고" /><br />
+				<a href="https://github.com/join?source=header-home" target="_blank"><code>GitHub 회원가입</code></a><br /><br />
 				GitHub 계정을 준비하신 분은<br />
-				아래 양식으로 <code>gdg.suwon@gmail.com</code> 으로<br />
-				GitHub 계정정보를 보내주세요.<br /><br />
-				제목: "나 코딩한다 GitHub 계정신청"<br />
-				GitHub 계정 : &lt;ex:) email@domain.com&gt;<br />
-				GitHub 아이디 : &lt;ex:) gdg.suwon&gt;<br /><br />
-				메일을 보낸 뒤, 승인 메일을 기다려주세요.<br />
-				(최대한 빠르게 승인할께요!)
+				<a href="https://goo.gl/SxoP4Q" target="_blank"><code>https://goo.gl/SxoP4Q</code></a> 에 접속하여,<br />
+				GitHub 계정정보를 입력해주세요.<br /><br />
 			</p>
 		</div>
 		<a name="checkout"></a>
 		<div class="scrollblock block-checkout">
-			<h2>저장소 받아오기</h2>
+			<h2>저장소 포크하기</h2>
 			<p>
-				GDG Suwon에서 만든 repository를 복제해요.<br /><br />
+				GDG Suwon에서 만든 저장소를 포크해요.<br />
+				(포크란? 저장소를 나의 저장소에 복사하는 것을 말해요)<br /><br />
 				<code>git clone https://github.com/gdgsuwon/solocoding2019.git</code><br />
 				<code>cd solocoding2019</code><br />
-			</p>
-		</div>
-		<a name="trees"></a>
-		<div class="scrollblock block-trees">
-			<h2>자신의 브랜치로 이동하기</h2>
-			<p>
-				checkout을 통해 자신의 브랜치로 이동해요.<br /><br />
-				<code>git checkout -b &lt;자신의 GitHub 아이디&gt;</code><br />
-			</p>
-		</div>
-		<a name="add"></a>
-		<div class="scrollblock block-add">
-			<h2>".gitignore" 파일 작성하기</h2>
-			<p>
-				자신의 브랜치에 <b>".gitignore"</b> 파일을 작성해보아요.<br /><br />
-				<b>".gitignore"</b> 파일이란?<br />
-				불필요한 build 결과물이나 환경설정을 git에서 제외시킬 수 있는 설정파일이에요.<br />
-				아래 링크로 들어가서, 내용을 모두 복사붙여넣기하여 <br />
-				<b>".gitignore"</b> 파일을 자신의 브랜치 최상위 경로에 생성합니다.<br /><br />
-				<code>https://raw.githubusercontent.com/nisrulz/flutter-examples/master/.gitignore</code><br />
-			</p>
-		</div>
-		<a name="push"></a>
-		<div class="scrollblock block-remote">
-			<h2>추가와 확정(commit)</h2>
-			<p>
-				생성한 <b>".gitignore"</b> 파일은 아래 명령어로 (<b>인덱스</b>에) 추가할 수 있어요.<br />
-				<code>git add .gitignore</code><br /><br />
-				이것이 바로 git의 기본 작업 흐름에서 첫 단계에 해당돼요.<br />
-				하지만 실제로 변경 내용을 확정하려면 아래 명령을 내려야 한답니다.<br />
-				<code>git commit -m "Add .gitignore file"</code><br /><br />
-				자, 이제 변경된 파일이 <b>HEAD</b>에 반영됐어요.<br />
-				하지만, 원격 저장소에는 아직 반영이 안 됐답니다.
-			</p>
-		</div>
-		<a name="update"></a>
-		<div class="scrollblock block-merging">
-			<h2>수정 내용 발행(push)하기</h2>
-			<p>
-				현재의 변경 내용은 아직 로컬 저장소의 <b>HEAD</b> 안에 머물고 있어요.<br />
-				이제 이 변경 내용을 원격 서버로 올려봅시다. 아래 명령을 실행하세요.<br /><br />
-				<code>git push origin &lt;자신의 브랜치명&gt;</code><br /><br />
-				짝짝짝! 드디어 git 저장소에 gitignore 파일을 넣어보았습니다.<br />
-				이처럼, 이후 작업하신 내용은 &lt;자신의 GitHub 아이디&gt;에 넣으시면 됩니다.<br /><br />	
 			</p>
 		</div>
 		<a name="checkout-replace"></a>
@@ -157,31 +112,99 @@
         <a name="setup"></a>
 		<div class="scrollblock block-setup">
 			<h2><img src="img/flutter-logo.png" /> 설치하기</h2>
-		    <p>자 그럼 이제부터 본격적으로 "Flutter" 를 시작해봐요! 설치부터</p>
-			<p><a href="https://flutter.dev/docs/get-started/install/windows">OS X용 Flutter 다운로드</a></p>
-		    <p><a href="https://flutter.dev/docs/get-started/install/macos">Windows용 Flutter 다운로드</a></p>
-			<p><a href="https://flutter.dev/docs/get-started/install/linux">Linux용 Flutter 다운로드</a></p>
+		    <p>지금부터는 "Flutter" 를 시작해봐요.</p>
+			<p><a href="https://flutter.dev/docs/get-started/install/windows" target="_blank">OS X용 Flutter 다운로드</a></p>
+		    <p><a href="https://flutter.dev/docs/get-started/install/macos" target="_blank">Windows용 Flutter 다운로드</a></p>
+			<p><a href="https://flutter.dev/docs/get-started/install/linux" target="_blank">Linux용 Flutter 다운로드</a></p>
 		</div>
 		<a name="create"></a>
 		<div class="scrollblock block-create">
 			<h2>IDE (통합개발환경) 설치하기</h2><br />
 			<p>
 			    Flutter는 <img src="img/android-studio-logo.png" />, <img src="img/intellij-logo.png" />, <img src="img/visual-studio-code-logo.png" /> 로 개발할 수 있어요.<br /><br />
-				<p><a href="https://flutter.dev/docs/get-started/editor">IDE 설치</a></p>
+				<p><a href="https://flutter.dev/docs/get-started/editor" target="_blank">IDE 설치</a></p>
 			</p>
 		</div>
 		<a name="update"></a>
 		<div class="scrollblock block-merging">
+			<h2>개발용 장치 연결하기</h2><br />
+			<p>
+			    Flutter는 다음 장치 중 하나를 사용하여 개발할 수 있어요.<br /><br />
+				1. 컴퓨터에 연결된 개발자 모드로 설정된 물리적인 기기<br />
+				2. <a href="https://flutter.io/setup-macos/#set-up-the-ios-simulator" target="_blank">아이폰 OS 시뮬레이터.</a> XCode 도구 설치가 필요합니다.<br />
+				3. <a href="https://flutter.io/setup-macos/#set-up-the-android-emulator" target="_blank">안드로이드 에뮬레이터.</a> Android Studio에서 설정해야합니다.<br />
+			</p>
 		</div>
 		<a name="tagging"></a>
 		<div class="scrollblock block-tagging">
+			<h2>초기 Flutter 앱 만들기</h2><br />
+			<p>
+			    <a href="https://flutter.io/get-started/test-drive/#androidstudio" target="_blank">첫 번째 Flutter 응용 프로그램 시작하기</a>에 따라<br />
+				기본 Flutter 응용 프로그램을 만듭니다 .<br /><br />
+				<code>lib / main.dart</code> 파일을 열고 아래와 같이 수정합니다.<br />
+				<pre><code>							import &#39;package:flutter/material.dart&#39;;
+							
+							void main() =&gt; runApp(new MyApp());
+							
+							class MyApp extends StatelessWidget {
+							  @override
+							  Widget build(BuildContext context) {
+							    return new MaterialApp(
+							      title: &#39;Welcome to Flutter&#39;,
+							      home: new Scaffold(
+							        appBar: new AppBar(
+							          title: const Text(&#39;Welcome to Flutter&#39;),
+							        ),
+							        body: const Center(
+							          child: const Text(&#39;Hello World&#39;),
+							        ),
+							      ),
+							    );
+							  }
+							}</code></pre>
+			</p>
 		</div>
 		<a name="checkout-replace"></a>
 		<div class="scrollblock block-checkout-replace">
+			<h2>Hello, World 실행 하기</h2><br />
+			<p>
+				아래 그림처럼 실행되어야 해요. <br />
+			</p>
+			<img src="img/android-result.png" />&nbsp;&nbsp;<img src="img/iphone-result.png" />
+			<p>
 		</div>
-		<a name="hints"></a>
-		<div class="scrollblock block-hints">
+		<a name="add"></a>
+		<div class="scrollblock block-add">
+			<h2>git 추가하기</h2>
+			<p>
+				이번에 작성한 파일을 원격 저장소에 저장해볼께요. <br />
+				먼저 생성한 파일들은 아래 명령어로 (<b>인덱스</b>에) 추가할 수 있어요.<br /><br />
+				<code>git add --all .</code><br /><br />
+				이것이 바로 git의 기본 작업 흐름에서 첫 단계에 해당돼요.<br />
+			</p>
 		</div>
+		<a name="push"></a>
+		<div class="scrollblock block-remote">
+			<h2>git 확정(commit)하기</h2>
+			<p>
+				위에 추가한 내용을 확정하려면 아래 명령을 내려야 한답니다.<br />
+				<code>git commit -m "Add .gitignore file"</code><br /><br />
+				자, 이제 변경된 파일이 <b>HEAD</b>에 반영됐어요.<br />
+				하지만, 원격 저장소에는 아직 반영이 안 됐답니다.
+			</p>
+		</div>
+		<a name="update"></a>
+		<div class="scrollblock block-merging">
+			<h2>수정 내용 발행(push)하기</h2>
+			<p>
+				현재의 변경 내용은 아직 로컬 저장소의 <b>HEAD</b> 안에 머물고 있어요.<br />
+				이제 이 변경 내용을 원격 서버로 올려봅시다. 아래 명령을 실행하세요.<br /><br />
+				<code>git push origin master</code><br /><br />
+				짝짝짝! 드디어 원격 저장소에 오늘 작성한 파일들을 넣어보았습니다.<br />
+				이처럼, 이후 작업하신 내용은 원격 저장소에 넣으시면 됩니다.<br /><br />	
+			</p>
+		</div>
+		
 		<a name="resources"></a>
 		<div class="scrollblock block-resources">
 			<h2>링크 & 자료</h2>

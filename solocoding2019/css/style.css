@@ -117,24 +117,31 @@ code {
 .block-trees code { color: #000; background-color: white; }
 .block-add { background-color: #cc4037; }
 .block-add h2 { color: #4c0d09; }
-.block-add p { font-size: 22px; color: #4c0d09; }
+.block-add p { color: #4c0d09; }
 .block-remote { background-color: #ffc19f; }
 .block-remote h2 { color: #cc4037; }
 .block-branching { background-color: #000; }
 .block-branching h2 { color: #FFF; }
 .block-branching p { color: #DDD; }
 .block-branching code { color: #000; background-color: white; }
+.block-branching a { font-size: 30px;  }
 .block-merging { background-color: #F2F2F2; }
 .block-merging h2 { color: #666; }
+.block-merging a { color: #348fd4; font-size: 30px; font-weight: normal;font-style: normal; padding: 10px 15px; border-radius: 10px; text-decoration: none; }
+.block-merging a:hover { text-decoration: underline; }
 .block-tagging { background-color: #F2F2F2; }
 .block-tagging h2 { color: #FFF; }
+.block-tagging pre { margin: 5px; border: 1px }
+.block-tagging code { text-align: left; }
+.block-tagging a { color: #7d1f19; font-size: 30px; font-weight: normal;font-style: normal; padding: 10px 15px; border-radius: 10px; text-decoration: none; }
+.block-tagging a:hover { text-decoration: underline; }
 .block-hints { background-color: #F2F2F2; }
 .block-hints h2 { color: #FFF; }
 .block-resources { background-color: #ffc19f; }
 .block-resources h2 { color: #cc4037; }
 .block-resources h3 { color: #7d1f19; }
 .block-resources ul { list-style: disc; margin: 0; padding: 0; }
-.block-resources ul li a { font-size: 24px; color: #cc4037; }
+.block-resources ul li a { font-size: 24px; color: #7d1f19; }
 .block-tagging { background-color: #348fd4; }
 .block-tagging h2 { color: #06406c; }
 .block-hints { background-color: #06406c; }
