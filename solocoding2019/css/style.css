@@ -131,6 +131,7 @@ code {
 .block-merging a:hover { text-decoration: underline; }
 .block-tagging { background-color: #F2F2F2; }
 .block-tagging h2 { color: #FFF; }
+.block-tagging div { width: 50%; margin:0 auto; }
 .block-tagging pre { margin: 5px; border: 1px }
 .block-tagging code { text-align: left; }
 .block-tagging a { color: #7d1f19; font-size: 30px; font-weight: normal;font-style: normal; padding: 10px 15px; border-radius: 10px; text-decoration: none; }
