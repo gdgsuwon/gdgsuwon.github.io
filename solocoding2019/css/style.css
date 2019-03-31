@@ -80,6 +80,7 @@ code {
     font-family: menlo, monospace;
 }
 
+
 /*----------------------------------------  BLOCKS */
 
 .scrollblock {
@@ -111,6 +112,7 @@ code {
 .block-create code { background-color: #000; color: #FFF; }
 .block-checkout { background-color: #FFF; }
 .block-checkout h2 { color: #000; }
+.block-checkout code { font-size: 20px; }
 .block-trees { background-color: #4c0d09; }
 .block-trees h2 { color: #d3b2af; }
 .block-trees p { color: #d3b2af; }

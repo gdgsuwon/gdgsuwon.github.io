@@ -93,10 +93,14 @@
 		<div class="scrollblock block-checkout">
 			<h2>저장소 포크하기</h2>
 			<p>
-				GDG Suwon에서 만든 저장소를 포크해요.<br />
+				GDG Suwon에서 만든 Baseline 저장소를 포크해요.<br />
 				(포크란? 저장소를 나의 저장소에 복사하는 것을 말해요)<br /><br />
-				<code>git clone https://github.com/gdgsuwon/solocoding2019.git</code><br />
-				<code>cd solocoding2019</code><br />
+				먼저 아래 링크로 이동한 뒤,<br />
+				<code>https://github.com/gdgsuwon/solocoding2019_base</code><br /><br />
+				우측 상단의 Fork 버튼을 눌러서 자신의 프로젝트를 생성합니다.<br />
+				<img src="img/fork.png" alt="Fork" /><br /><br />
+				그리고 git clone으로 소스코드를 다운로드 받습니다.<br />
+				<code>git clone https://github.com/[자신의아이디]/solocoding2019_base.git</code><br />
 			</p>
 		</div>
 		<a name="checkout-replace"></a>
@@ -140,7 +144,8 @@
 			<h2>초기 Flutter 앱 만들기</h2><br />
 			<p>
 			    <a href="https://flutter.io/get-started/test-drive/#androidstudio" target="_blank">첫 번째 Flutter 응용 프로그램 시작하기</a>에 따라<br />
-				기본 Flutter 응용 프로그램을 만듭니다 .<br /><br />
+				기본 Flutter 응용 프로그램을 만듭니다 .<br />
+				프로그램은 아까 git clone 한 위치에 만들어야해요.<br /><br />
 				<code>lib / main.dart</code> 파일을 열고 아래와 같이 수정합니다.<br />
 				<div>
 				<pre><code>import &#39;package:flutter/material.dart&#39;;
